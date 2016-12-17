@@ -18,4 +18,14 @@ func main() {
 	*b = 42 //changing value at root memory address
 
 	fmt.Println(a)
+
+	//using pointers in functions
+	z := 0
+	fmt.Println(z)
+	reference(&z)
+	fmt.Print(z)
+}
+
+func reference(z *int) {
+	*z = 6
 }
